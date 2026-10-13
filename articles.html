@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Artículos sobre desarrollo web">
+    <meta name="author" content="Diego Alejandro Sepulveda Perez">
+    <title>Artículos - Mi sitio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="inicio">
+    <header>
+        <h1>mi sitio personal</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="projects.html">proyecto</a></li>
+                <li><a href="articles.html">articulos</a></li>
+                <li><a href="contact.html">contacto</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" class="btn-theme">🌙 Modo Oscuro</button>
+    </header>
+
+    <main>
+        <section>
+            <h2>Artículos</h2>
+            <p>Escribo sobre desarrollo web, HTML, CSS y buenas prácticas.</p>
+
+            <div class="articulos-grid">
+
+                <article class="articulo">
+                    <h3>Qué es HTML semántico y por qué importa tanto</h3>
+                    <span class="fecha">Publicado el 5 de octubre de 2025</span>
+                    <p>El HTML semántico consiste en usar etiquetas que describen el significado del contenido, como header, nav, main, article o section, en lugar de divs genéricos. Esto mejora la accesibilidad, el SEO y el mantenimiento del código.</p>
+                    <a href="#">Leer más</a>
+                </article>
+
+                <article class="articulo">
+                    <h3>Diferencia entre section y article</h3>
+                    <span class="fecha">Publicado el 5 de octubre de 2025</span>
+                    <p>Muchas personas confunden section con article. La clave está en la independencia: un article tiene sentido por sí solo fuera de la página, mientras que una section es solo una parte temática del contenido.</p>
+                    <a href="#">Leer más</a>
+                </article>
+
+                <article class="articulo">
+                    <h3>Meta tags SEO que debes conocer</h3>
+                    <span class="fecha">Publicado el 1 de octubre de 2025</span>
+                    <p>Las meta tags description, keywords y author van dentro del head y no se ven en la página, pero le dan información importante a los buscadores y al navegador. Conocerlas es el primer paso para un buen SEO.</p>
+                    <a href="#">Leer más</a>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Diego Alejandro. todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        themeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            themeBtn.textContent = document.body.classList.contains('dark-mode')
+                ? '☀️ Modo Claro'
+                : '🌙 Modo Oscuro';
+        });
+    </script>
+</body>
+</html>
